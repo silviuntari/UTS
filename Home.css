@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'aside main'
+        'aside main'
+        'footer footer';
+    grid-template-columns: 0.60fr 2.25fr; 
+    grid-template-rows: 0.40fr 1fr 2fr 0.40fr;
+}
+
+header {
+    background-image: url('https://images.pexels.com/photos/2885578/pexels-photo-2885578.jpeg?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+    padding: 40px 20px;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content {
+    color: rgb(255, 255, 255);
+}
+
+header nav {
+    margin-top: 30px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(#DE7C7D,#740938); 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    color: #ffffff; 
+    border-radius: 10px;
+}
+header h1 {
+    font-size: 4rem;
+}
+header nav a:hover {
+    background: linear-gradient(pink, rgb(153, 85, 97)); 
+    color: #000000; 
+}
+
+/* Sidebar styling */
+aside {
+    background: linear-gradient(#DE7C7D, #852841);
+    padding: 20px;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+aside nav a {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 1em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 230px;
+    padding: 10px 15px; /* memberi ruang di dalam link */
+    background: linear-gradient(#da8a8b,#740938); /* memberi efek gradien pada latar belakang link */
+}
+
+aside nav a:hover {
+    background: linear-gradient(pink, rgb(153, 85, 97)); /* mengubah warna latar belakang link saat di-hover */
+    color: #000000; /* mengubah warna teks link menjadi hitam saat di-hover */
+}
+
+aside nav a img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px; 
+}
+aside img {
+    width: 230px;
+    height: auto;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar {
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gam {
+    position: relative;
+    width: 300PX; /* Tiga elemen di setiap baris dengan jarak yang konsisten */
+    height: 300px;  /* Tinggi tetap untuk menjaga ukuran yang seragam */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gam img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsi gambar agar memenuhi area tanpa distorsi */
+    transition: transform 0.3s ease;
+}
+
+.gam:hover img {
+    transform: scale(1.05); /* Efek zoom pada hover */
+}
+
+.content-overlay {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.content-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.buy-btn {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.buy-btn:hover {
+    background-color: #ff3e2b;
+}
+article h2 {
+    color: #000000;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.bungkus {
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    padding: 10px 0;
+    gap: 15px; 
+}
+
+.bulatan {
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding: 23px;
+}
+
+.bulat {
+    border-radius: 50%; 
+    width: 85px;
+    height: 85px;
+    margin-bottom: 5px; 
+}
+
+.bulatan p {
+    font-size: 1rem;
+    color: #ffffff; 
+    background-color: #DE7C7D;
+    text-align: center;
+    margin: 5px 0; 
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.kotak {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.kotak:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.kotak .box img {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.kotak .box img:hover {
+    transform: scale(1.1); 
+}
+
+.kotak .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #852841;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.kotak .boking a {
+    display: inline-block;
+    background-color: #DE7C7D;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.kotak .boking a:hover {
+    background-color: #ff3e2b;
+}
+
+.kotak .bok {
+    flex: 1;
+    margin-left: 20px;
+    padding-top: 0;
+}
+
+.kotak .bok h1 {
+    font-size: 1.8rem;
+    color: #852841;
+    margin-top: 0;
+}
+
+.kotak .bok li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    text-transform: lowercase;
+    margin-bottom: 10px; 
+}
+
+
+/* Footer styling */
+footer {
+    background: linear-gradient(#DE7C7D, #852841); 
+    padding: 20px;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.footersatu,
+.footerdua,
+.footertiga {
+    flex: 1;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p,
+footer address {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+@media (max-width: 576px) {
+    /* Container layout adjustments */
+    .container {
+        display: grid;
+        grid-template-areas:
+            'header'
+            'aside'
+            'main'
+            'footer';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header nav a {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+
+    /* Sidebar adjustments for navigation and images */
+    aside {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust logo image in the navigation to stay visible and resize proportionally */
+    aside nav img {
+        width: 40px; /* Adjust size as needed */
+        height: 40px;
+        margin-right: 8px;
+        display: inline; /* Ensure logo remains visible */
+    }
+
+    /* Hide other images in the .nav class */
+    .nav img {
+        display: none;
+    }
+
+    /* Sidebar navigation links styling */
+    aside nav a {
+        width: 100%; /* Full width for navigation links */
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .gambar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .gam {
+        width: 100%;
+        max-width: 250px;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* Footer layout adjustments */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footersatu,
+    .footerdua,
+    .footertiga {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Most post section for circular icons */
+    .bungkus {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .bulatan {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bulat {
+        width: 85px;
+        height: 85px;
+        margin-bottom: 5px;
+    }
+
+    /* Product box adjustments */
+    .kotak {
+        flex-direction: column;
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .kotak .box img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    .kotak .title {
+        font-size: 1.1rem;
+    }
+
+    .kotak .bok h1 {
+        font-size: 1.3rem;
+    }
+
+    .kotak .bok li {
+        font-size: 0.85rem;
+    }
+
+    /* Footer text styling */
+    footer p,
+    footer address {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+}
